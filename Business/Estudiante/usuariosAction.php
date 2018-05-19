@@ -84,7 +84,7 @@ if ($accion == "eliminarAsistente") {
         $cedula = $_POST['cedula'];
         $usuariosBusiness = new usuariosBusiness();
         $result = $usuariosBusiness->eliminarAsistente($cedula);
-        if ($result == 1) {
+        if ($result == true) {
             echo 'true';
         }
     } else {
