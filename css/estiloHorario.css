@@ -1,0 +1,24 @@
+.padreHorario {
+  background: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#estiloNoticias{
+    background:white;
+    padding:40px 0px 0px 30px;
+    font-family:verdana,arial;
+    font-size:9pt;
+    color: red;
+    table-layout:initial; 
+
+}
+#estiloHorario{
+    background:white;
+    padding: 40px 0px 0px 30px;
+    font-family:verdana,arial;
+    font-size:9pt;
+}
+

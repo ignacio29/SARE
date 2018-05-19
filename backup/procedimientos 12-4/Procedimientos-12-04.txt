@@ -1,0 +1,22 @@
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizarAdministrador`(IN `cedula` VARCHAR(20), IN `nombre` VARCHAR(20), IN `apellidoA` VARCHAR(20), IN `apellidoB` VARCHAR(20))
+    MODIFIES SQL DATA
+UPDATE  tbadministrador set nombreadministrador=nombre,primerapellidoadministrador=apellidoA,segundoapellidoadministrador=apellidoB where cedulaadministrador=cedula$$
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verAsistente`(IN `cedula` VARCHAR(15))
+    READS SQL DATA
+SELECT* FROM tbasistente WHERE cedulaasistente=cedula
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verEstudiante`(IN `cedula` VARCHAR(15))
+    READS SQL DATA
+SELECT* FROM tbestudiante WHERE cedulaestudiante=cedula
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verficarCorreo`(IN `correo` VARCHAR(100))
+    READS SQL DATA
+SELECT userlogin FROM tblogin  WHERE userlogin=correo
+
+

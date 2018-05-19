@@ -1,0 +1,46 @@
+body {
+	  background:url(http://www.wallpapersxl.com/wallpapers/1280x800/turquesa/1129844/turquesa-fondos-de-pantalla-fondo-oscuro-tama-o-x-1129844.jpg) no-repeat center center fixed;
+    padding-top: 90px;
+-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+}
+* {
+    -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+}
+
+    .form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+	label{
+		color: White;
+	}
+	#prinConta{
+		color: #fff;
+   background-color: rgba(25,25,27,0.3);
+
+	}
+	p{
+		color: White;
+	}
+	#textofinal{
+		background: Black;
+	text-align: center;
+	font-size: 50px;
+	color:#444444;
+
+}
+

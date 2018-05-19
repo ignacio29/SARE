@@ -1,0 +1,56 @@
+/*Cabecera de las tablas, donde se muestra en nombre de las columnas*/
+.cabeceraTabla{
+    background-color: #4CAF50;
+    color: white;
+		border-bottom: 2px solid #ddd;
+}
+.centro{
+	align-content: center;
+	align-items: center;
+}
+
+
+.comentarioAvisoCreador{
+	font-size: 17px;
+	color: #1134b3;
+	font-weight: bold;
+	font-weight: lighter;
+	font-style: italic;
+}
+.creadoPor{
+	font-size: 13px;
+	color: #2c2c2c;
+}
+.fecha{
+	font-size: 13px;
+	color: #2c2c2c;
+}
+.comentarioAviso{
+	font-size: 14px;
+	color: #52170a;
+	font-style: italic;
+}
+ 
+
+.ion-minus{
+    padding:0px 10px;
+}
+
+.blog{
+	background-color:#F63535;
+}
+
+.blog .card {
+    background-color: #F63535;
+    border: 1px solid #eceaea;
+    margin: 20px 0px;
+}
+
+.blog .card-block {
+    padding: 15px;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
