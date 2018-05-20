@@ -14,7 +14,7 @@ session_start();
       <table class="default table table-bordered table-striped"  content="width=device-width" >
          <thead> 
          <th id="agregar" style="display: block">
-             <button data-toggle="modal" onclick="limpiarModalClases()" id="btnAgregar" data-target="#registrarHorario">AGRGAR</button>
+             <button data-toggle="modal" onclick="limpiarModalClases()" id="btnAgregar" data-target="#registrarHorario">AGREGAR</button>
          </th>
             <th style="width:50%">
                <input type="text"  class="form-control" onkeyup="busquedaTablas(this)" maxlength="64" size="20" placeholder="Busqueda General" >
@@ -52,123 +52,137 @@ session_start();
          <button type="button" id="btnConfirmar" data-toggle="modal" data-target="#confirmarHorario" class="">CONFIRMAR HORARIO</button>
       </div>
     </div>
- <div class="modal fade" id="registrarHorario" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-   <div class="modal-dialog">
-      <div class="modal-content">
-         <div class="modal-header">
-            <button type="button" id="cerrar1" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <center>
-               <h4 class="modal-title custom_align" id="Heading">REGISTRAR HORARIO DE CLASES</h4>
-            </center>
-         </div>
-         <div class="modal-body">
-            <div   >
-               <div  >
-                  <form >
-                     <div class="row">
-                        <div class="col-md-1"> </div>
-                        <div class="col-md-9 row"  >
-                           <div class="col-md-12">
-                              <br>
-                           </div>
-                           <div class="col-sm-1"></div>
-                           <div class="col-sm-2">
-                              <label class="control-label col-xs-3">D&IacuteAS</label>
-                           </div>
-                           <div class="col-sm-2"></div>
-                           <div class="col-sm-6">
-                              <select class="form-control" id="dias">
-                                 <option>LUNES</option>
-                                 <option>MARTES</option>
-                                 <option>MIERCOLES</option>
-                                 <option>JUEVES</option>
-                                 <option>VIERNES</option>
-                                 <option>SABADO</option>
-                              </select>
-                           </div>
-                           <div class="col-sm-12"><br></div>
-                           <div class="col-sm-1"></div>
-                           <div class="col-sm-2">
-                              <label class="control-label col-xs-3">INICIO</label>
-                           </div>
-                           <div class="col-sm-1"></div>
-                           <div class="col-md-8">
-                              <div class="input-group">
-                                 <div class="col-sm-2">  
-                                    <input  type="button"   value="-" onclick="previous();cargarSelect();">
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <select class="form-control"  name="horaInicio" id="horaInicio" disabled="true" onchange="cargarSelectSalida()">
-                                       <option value="08AM">08AM</option>
-                                       <option value="09AM">09AM</option>
-                                       <option value="10AM">10AM</option>
-                                       <option value="01PM">01PM</option>
-                                       <option value="02PM">02PM</option>
-                                       <option value="03PM">03PM</option>
-                                       <option value="04PM">04PM</option>
-                                       <option value="05PM">05PM</option>
-                                       <option value="06PM">06PM</option>
-                                       <option value="07PM">07PM</option>
-                                       <option value="08PM">08PM</option>
-                                    </select>
-                                 </div>
-                                 <div class="col-sm-2">
-                                    <input type="button"   value="+" onclick="next();cargarSelect();">
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-sm-12"><br></div>
-                           <div class="col-sm-1"></div>
-                           <div class="col-sm-2">
-                              <label class="control-label col-xs-3">SALIDA</label>
-                           </div>
-                           <div class="col-sm-1"></div>
-                           <div class="col-md-8">
-                              <div class="input-group">
-                                 <div class="col-sm-2"> 
-                                    <input type="button" value="-" onclick="previousSalida();">
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <select class="form-control" name="horaSalida" id="horaSalida" disabled="true" >
-                                    </select>
-                                 </div>
-                                 <div class="col-sm-2">
-                                    <input type="button" value="+" onclick="nextSalida();">
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-sm-12"><br></div>
-                           <div class="col-sm-1"></div>
-                           <div class="col-sm-2">
-                              <label class="control-label col-xs-3">CURSO</label>
-                           </div>
-                           <div class="col-sm-2"></div>
-                           <div class="col-sm-6">
-                              <input type="text" class="form-control" id="curso"  onkeyup="validarCurso(this);" onfocusout="habilitarRegistroHorario();"><span id="cursook"></span>
-                           </div>
-                           <div class="col-sm-12"><br></div>
-                           <div class="col-sm-1"></div>
-                           <div class="col-sm-2">
-                              <label class="control-label col-xs-3">PROFESOR</label>
-                           </div>
-                           <div class="col-sm-2"></div>
-                           <div class="col-sm-6">
-                              <input type="text" class="form-control" id="profesor" onkeyup="validarProfesor(this);"   onfocusout="habilitarRegistroHorario();"><span id="profesorok"></span>
-                           </div>
-                        </div>
-                     </div>
-                  </form>
+ 
+
+<div class="modal fade" id="registrarHorario" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+   <button type="button" id="cerrar1" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+   <center>
+      <h4 class="modal-title custom_align" id="Heading">REGISTRAR HORARIO DE CLASES</h4>
+   </center>
+</div>
+<div class="modal-body">
+   <form >
+      <div class="row">
+         <div class="col-sm-1"></div>
+         <div class="col-md-9 row"  >
+            <div class="col-sm-1"></div>
+            <div class="row">
+               <div class="col-25">
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-2">
+                     <label class="control-label col-xs-3">D&IacuteAS</label>
+                  </div>
+               </div>
+               <div class="col-75">
+                  <div class="col-sm-8">
+                     <select class="form-control" id="dias">
+                        <option>LUNES</option>
+                        <option>MARTES</option>
+                        <option>MIERCOLES</option>
+                        <option>JUEVES</option>
+                        <option>VIERNES</option>
+                        <option>SABADO</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-25">
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-2">
+                     <label class="control-label col-xs-3">INICIO</label>
+                  </div>
+               </div>
+               <div class="col-75">
+                  <div class="col-sm-4">
+                     <input  type="button"   value="-" onclick="previous();cargarSelect();">
+                  </div>
+                  <div class="col-sm-6">
+                     <select class="form-control"  name="horaInicio" id="horaInicio" disabled="true" onchange="cargarSelectSalida()">
+                        <option value="08AM">08AM</option>
+                        <option value="09AM">09AM</option>
+                        <option value="10AM">10AM</option>
+                        <option value="01PM">01PM</option>
+                        <option value="02PM">02PM</option>
+                        <option value="03PM">03PM</option>
+                        <option value="04PM">04PM</option>
+                        <option value="05PM">05PM</option>
+                        <option value="06PM">06PM</option>
+                        <option value="07PM">07PM</option>
+                        <option value="08PM">08PM</option>
+                     </select>
+                  </div>
+                  <div class="col-sm-2">
+                     <input type="button"   value="+" onclick="next();cargarSelect();">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-25">
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-2">
+                     <label class="control-label col-xs-3">SALIDA</label>
+                  </div>
+               </div>
+               <div class="col-75">
+                  <div class="col-sm-4">
+                     <input type="button" value="-" onclick="previousSalida();">
+                  </div>
+                  <div class="col-sm-6">
+                     <select class="form-control" name="horaSalida" id="horaSalida" disabled="true" >
+                     </select>
+                  </div>
+                  <div class="col-sm-2">
+                     <input type="button" value="+" onclick="nextSalida();">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-25">
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-2">
+                     <label class="control-label col-xs-3">CURSO</label>
+                  </div>
+               </div>
+               <div class="col-75">
+                  <div class="col-sm-2"></div>
+                  <div class="col-sm-8">
+                     <input type="text" class="form-control" id="curso"  onkeyup="validarCurso(this);" onfocusout="habilitarRegistroHorario();"><span id="cursook"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-25">
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-2">
+                     <label class="control-label col-xs-3">PROFESOR</label>
+                  </div>
+               </div>
+               <div class="col-75">
+                  <div class="col-sm-2"></div>
+                  <div class="col-sm-8">
+                     <input type="text" class="form-control" id="profesor" onkeyup="validarProfesor(this);"   onfocusout="habilitarRegistroHorario();"><span id="profesorok"></span>
+                  </div>
                </div>
             </div>
          </div>
+      </div>
+   </form>
+</div>
+         
          <div class="modal-footer ">
             <button type="button" id="registrar"  onclick="insertarHorario();" disabled >GUARDAR</button>
          </div>
+         
       </div>
       <!-- /.modal-content -->
    </div>
    <!-- /.modal-dialog -->
 </div>
+
 <div class="modal fade" id="actualizarHorario" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
    <div class="modal-dialog">
       <div class="modal-content">
@@ -179,21 +193,20 @@ session_start();
             </center>
          </div>
          <div class="modal-body">
-            <div   >
-               <div  >
-                  <form >
+            <form >
+               <div class="row">
+                  <div class="col-sm-1"></div>
+                  <div class="col-md-9 row"  >
+                     <div class="col-sm-1"></div>
                      <div class="row">
-                        <div class="col-md-1"> </div>
-                        <div class="col-md-9 row"  >
-                           <div class="col-md-12">
-                              <br>
-                           </div>
+                        <div class="col-25">
                            <div class="col-sm-1"></div>
                            <div class="col-sm-2">
                               <label class="control-label col-xs-3">D&IacuteAS</label>
                            </div>
-                           <div class="col-sm-2"></div>
-                           <div class="col-sm-6">
+                        </div>
+                        <div class="col-75">
+                           <div class="col-sm-8">
                               <select class="form-control" id="dias2">
                                  <option>LUNES</option>
                                  <option>MARTES</option>
@@ -203,69 +216,79 @@ session_start();
                                  <option>SABADO</option>
                               </select>
                            </div>
-                           <div class="col-sm-12"><br></div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-25">
                            <div class="col-sm-1"></div>
                            <div class="col-sm-2">
                               <label class="control-label col-xs-3">INICIO</label>
                            </div>
-                           <div class="col-sm-1"></div>
-                           <div class="col-md-8">
-                              <div class="input-group">
-                                 <div class="col-sm-2">
-                                    <input type="button" value="-" onclick="previousModificar();cargarSelectModificar();">
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <select class="form-control" name="horaInicio2" id="horaInicio2" disabled="true" onchange="cargarSelectSalida()">
-                                    </select>
-                                 </div>
-                                 <div class="col-sm-2">
-                                    <input type="button" value="+" onclick="nextModificar();cargarSelectModificar();">
-                                 </div>
-                              </div>
+                        </div>
+                        <div class="col-75">
+                           <div class="col-sm-4">
+                              <input type="button" value="-" onclick="previousModificar();cargarSelectModificar();">
                            </div>
-                           <div class="col-sm-12"><br></div>
+                           <div class="col-sm-6">
+                              <select class="form-control" name="horaInicio2" id="horaInicio2" disabled="true" onchange="cargarSelectSalida()">
+                              </select>
+                           </div>
+                           <div class="col-sm-2">
+                              <input type="button" value="+" onclick="nextModificar();cargarSelectModificar();">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-25">
                            <div class="col-sm-1"></div>
                            <div class="col-sm-2">
                               <label class="control-label col-xs-3">SALIDA</label>
                            </div>
-                           <div class="col-sm-1"></div>
-                           <div class="col-md-8">
-                              <div class="input-group">
-                                 <div class="col-sm-2">
-                                    <input type="button" value="-" onclick="previousSalidaModificar();">
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <select class="form-control" name="horaSalida2" id="horaSalida2" disabled="true" >
-                                    </select>
-                                 </div>
-                                 <div class="col-sm-2">
-                                    <input type="button" value="+" onclick="nextSalidaModificar();">
-                                 </div>
-                              </div>
+                        </div>
+                        <div class="col-75">
+                           <div class="col-sm-4">
+                              <input type="button" value="-" onclick="previousSalidaModificar();">
                            </div>
-                           <div class="col-sm-12"><br></div>
+                           <div class="col-sm-6">
+                              <select class="form-control" name="horaSalida2" id="horaSalida2" disabled="true" >
+                              </select>
+                           </div>
+                           <div class="col-sm-2">
+                              <input type="button" value="+" onclick="nextSalidaModificar();">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-25">
                            <div class="col-sm-1"></div>
                            <div class="col-sm-2">
                               <label class="control-label col-xs-3">CURSO</label>
                            </div>
+                        </div>
+                        <div class="col-75">
                            <div class="col-sm-2"></div>
-                           <div class="col-sm-6">
+                           <div class="col-sm-8">
                               <input type="text" class="form-control" id="curso2" onkeyup="validarCurso2(this);" onfocusout="habilitarModificarHorario();"><span id="curso2ok"></span>
                            </div>
-                           <div class="col-sm-12"><br></div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-25">
                            <div class="col-sm-1"></div>
                            <div class="col-sm-2">
                               <label class="control-label col-xs-3">PROFESOR</label>
                            </div>
+                        </div>
+                        <div class="col-75">
                            <div class="col-sm-2"></div>
-                           <div class="col-sm-6">
+                           <div class="col-sm-8">
                               <input type="text" class="form-control" id="profesor2" onkeyup="validarProfesor2(this);" onfocusout="habilitarModificarHorario();"><span id="profesor2ok"></span>
                            </div>
                         </div>
                      </div>
-                  </form>
+                  </div>
                </div>
-            </div>
+            </form>
          </div>
          <div class="modal-footer ">
             <button type="button" id="modificar" onclick="actualizar();"  disabled >GUARDAR</button>
