@@ -112,7 +112,7 @@ session_start();
                      </div>
                      <div class="col-sm-1"></div>
                      <div class="col-sm-8">
-                        <textarea rows="2"  cols="30" class="txtArea form-control"  type="text" id="temaAnuncio1"  placeholder="Ingrese el titulo de la noticia" onkeyup="validarInputTitulo(this)" onfocusout="habilitarRegistroNoticia()"  ></textarea><span id="titulo1"></span>
+                        <textarea rows="2"  cols="30" class="txtArea form-control"  type="text" id="temaAnuncio1"  placeholder="Ingrese el titulo de la noticia" onkeyup="validarInputTitulo(this);habilitarRegistroNoticia();" onfocusout="habilitarRegistroNoticia()"  ></textarea><span id="titulo1"></span>
                      </div>
                      <div class="col-sm-12"><br></div>
                      <div class="col-sm-1"></div>
@@ -121,7 +121,7 @@ session_start();
                      </div>
                      <div class="col-sm-1"></div>
                      <div class="col-sm-8">
-                        <textarea rows="4"  cols="30" class="txtArea form-control"  type="text" id="detalleAnuncio1" placeholder="Ingrese un detalla de noticia" onkeyup="validarInputNoticia(this)" onfocusout="habilitarRegistroNoticia()"  ></textarea> <span id="noticia1"></span>
+                        <textarea rows="4"  cols="30" class="txtArea form-control"  type="text" id="detalleAnuncio1" placeholder="Ingrese un detalla de noticia" onkeyup="validarInputNoticia(this);habilitarRegistroNoticia();" onfocusout="habilitarRegistroNoticia()"  ></textarea> <span id="noticia1"></span>
                      </div>
                      <div class="col-sm-12"><br></div>
                      <div class="col-sm-1"></div>
@@ -186,7 +186,7 @@ session_start();
                      </div>
                      <div class="col-sm-1"></div>
                      <div class="col-sm-8">
-                        <textarea rows="2"  cols="30" class="txtArea form-control"  type="text" id="temaAnuncio2" onkeyup="validarInputTitulo2(this)" autofocus="habilitarRegistroNoticia2()"  ></textarea><span id="titulo2"></span>
+                        <textarea rows="2"  cols="30" class="txtArea form-control"  type="text" id="temaAnuncio2" onkeyup="validarInputTitulo2(this);habilitarRegistroNoticia2();" autofocus="habilitarRegistroNoticia2()"  ></textarea><span id="titulo2"></span>
                      </div>
                      <div class="col-sm-12"><br></div>
                      <div class="col-sm-1"></div>
@@ -195,7 +195,7 @@ session_start();
                      </div>
                      <div class="col-sm-1"></div>
                      <div class="col-sm-8">
-                        <textarea rows="4"  cols="30" class="txtArea form-control"  type="text" id="detalleAnuncio2" onkeyup="validarInputNoticia2(this)" autofocus="habilitarRegistroNoticia2()" ></textarea><span id="noticia2"></span>
+                        <textarea rows="4"  cols="30" class="txtArea form-control"  type="text" id="detalleAnuncio2" onkeyup="validarInputNoticia2(this);habilitarRegistroNoticia2();" autofocus="habilitarRegistroNoticia2()" ></textarea><span id="noticia2"></span>
                      </div>
                      <div class="col-sm-12"><br></div>
                      <div class="col-sm-1"></div>

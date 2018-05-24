@@ -41,9 +41,9 @@
 			<ul>
 				<li><a href="index.php"><span class="icon-home"></span>INICIO</a></li>
 				
-				<li><a href="#mision" onclick="verificarSeccion('mision')"><span class="icon-home"></span>MISI&OacuteN</a></li>
+				<li><a href="#mision" onclick="verificarSeccion('mision')"><span class="icon-leaf"></span>MISI&OacuteN</a></li>
 				
-				<li><a href="#vision" onclick="verificarSeccion('vision')" ><span class="icon-home"></span>VISI&OacuteN</a></li>
+				<li><a href="#vision" onclick="verificarSeccion('vision')" ><span class="icon-eye"></span>VISI&OacuteN</a></li>
 				
 				<li>
 					<a href="#historia" onclick="verificarSeccion('historia')"><span class="icon-library"></span>HISTORIA</a>

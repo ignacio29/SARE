@@ -125,7 +125,7 @@ session_start();
                            </div>
                            <div class="col-sm-1"></div>
                            <div class="col-sm-6">
-                              <input class="form-control" type="text" id="nombre" onkeyup="validarInputNombre(this)" onfocusout="habilitarRegistroArticulo()"><span id="cedulaok"></span>
+                              <input class="form-control" type="text" id="nombre" onkeyup="validarInputNombre(this);habilitarRegistroArticulo();" onfocusout="habilitarRegistroArticulo();"><span id="nombreok"></span>
                            </div>
                            <div class="col-sm-12"><br></div>
                            <div class="col-sm-1"></div>
@@ -134,7 +134,7 @@ session_start();
                            </div>
                            <div class="col-sm-1"></div>
                            <div class="col-sm-6">
-                              <input type="text" class="form-control" id="serie" onkeyup="validarInputNombre(this)" onfocusout="habilitarRegistroArticulo()">
+                              <input type="text" class="form-control" id="serie" onkeyup="validarInputSerie(this);habilitarRegistroArticulo();"><span id="serieok" onfocusout="habilitarRegistroArticulo();"></span>
                            </div>
                            <div class="col-sm-12"><br></div>
                            <div class="col-sm-1"></div>
@@ -156,7 +156,8 @@ session_start();
                            </div>
                            <div class="col-sm-1"></div>
                            <div class="col-sm-6">
-                              <textarea rows="2"  cols="20" class="txtArea form-control"  type="text" id="descripcion" onkeyup="validarInputNombre(this)" onfocusout="habilitarRegistroArticulo()"></textarea>
+                              <textarea rows="2"  cols="20" class="txtArea form-control"  type="text" id="descripcion" onkeyup="validarInputDescripcion(this);habilitarRegistroArticulo();" onfocusout="habilitarRegistroArticulo();>
+                              </textarea><span id="descripcionok"></span>
                               <br>
                            </div>
                            <div class="col-sm-12"></div>
@@ -207,7 +208,7 @@ session_start();
                            </div>
                            <div class="col-sm-1"></div>
                            <div class="col-sm-6">
-                              <input class="form-control" type="text" id="nombre2" onkeyup=""><span id="cedulaok"></span>
+                              <input class="form-control" type="text" id="nombre2" onkeyup="validarInputNombre2(this);habilitarModificarArticulo();" onfocusout="habilitarModificarArticulo();"> <span id="nombre2ok"></span>
                            </div>
                            <div class="col-sm-12"><br></div>
                            <div class="col-sm-1"></div>
@@ -238,7 +239,7 @@ session_start();
                            </div>
                            <div class="col-sm-1"></div>
                            <div class="col-sm-6">
-                              <textarea rows="2"  cols="20" class="txtArea form-control"  type="text" id="descripcion2"></textarea>
+                              <textarea rows="2"  cols="20" class="txtArea form-control"  type="text" id="descripcion2" onkeyup="validarInputDescripcion2(this);habilitarModificarArticulo();" onfocusout="habilitarModificarArticulo();"></textarea><span id="descripcion2ok"></span>
                               <br>
                            </div>
                            <div class="col-sm-12"><br></div>
@@ -260,7 +261,7 @@ session_start();
                   </form>
                </div>
                <div class="modal-footer ">
-                  <button type="button" id="registrarArticulo" onclick="modificarArticulo()" >GUARDAR</button>
+                  <button type="button" id="btnModificar" onclick="modificarArticulo()" disabled >GUARDAR</button>
                </div>
             </div>
             <!-- /.modal-content -->

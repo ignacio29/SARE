@@ -154,6 +154,9 @@ class articulosBusiness {
     public function deleteArticuloDeficiente($idDano) {
         return $this->articulosData->deleteArticuloDeficiente($idDano);
     }
+    public function obtenerSerie($serie) {
+      return  $this->articulosData->obtenerSerie($serie);
+    }
 
 }
 

@@ -150,7 +150,7 @@ session_start();
                <div class="col-75">
                   <div class="col-sm-2"></div>
                   <div class="col-sm-8">
-                     <input type="text" class="form-control" id="curso"  onkeyup="validarCurso(this);" onfocusout="habilitarRegistroHorario();"><span id="cursook"></span>
+                     <input type="text" class="form-control" id="curso"  onkeyup="validarCurso(this);habilitarRegistroHorario();" onfocusout="habilitarRegistroHorario();"><span id="cursook"></span>
                   </div>
                </div>
             </div>
@@ -164,7 +164,7 @@ session_start();
                <div class="col-75">
                   <div class="col-sm-2"></div>
                   <div class="col-sm-8">
-                     <input type="text" class="form-control" id="profesor" onkeyup="validarProfesor(this);"   onfocusout="habilitarRegistroHorario();"><span id="profesorok"></span>
+                     <input type="text" class="form-control" id="profesor" onkeyup="validarProfesor(this);habilitarRegistroHorario();"   onfocusout="habilitarRegistroHorario();"><span id="profesorok"></span>
                   </div>
                </div>
             </div>
@@ -268,7 +268,7 @@ session_start();
                         <div class="col-75">
                            <div class="col-sm-2"></div>
                            <div class="col-sm-8">
-                              <input type="text" class="form-control" id="curso2" onkeyup="validarCurso2(this);" onfocusout="habilitarModificarHorario();"><span id="curso2ok"></span>
+                              <input type="text" class="form-control" id="curso2" onkeyup="validarCurso2(this);habilitarModificarHorario();" onfocusout="habilitarModificarHorario();"><span id="curso2ok"></span>
                            </div>
                         </div>
                      </div>
@@ -282,7 +282,7 @@ session_start();
                         <div class="col-75">
                            <div class="col-sm-2"></div>
                            <div class="col-sm-8">
-                              <input type="text" class="form-control" id="profesor2" onkeyup="validarProfesor2(this);" onfocusout="habilitarModificarHorario();"><span id="profesor2ok"></span>
+                              <input type="text" class="form-control" id="profesor2" onkeyup="validarProfesor2(this);habilitarModificarHorario();" onfocusout="habilitarModificarHorario();"><span id="profesor2ok"></span>
                            </div>
                         </div>
                      </div>

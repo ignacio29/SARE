@@ -214,7 +214,6 @@ function consultarArticulo() {
 
 function cargarVistaModificarArticulo(id) {
             document.getElementById('nombre2').style="border-color: rgb(129, 247, 159); border-width: 3px; border-style: solid;";
-             document.getElementById('serie2').style="border-color: rgb(129, 247, 159); border-width: 3px; border-style: solid;";
               document.getElementById('descripcion2').style="border-color: rgb(129, 247, 159); border-width: 3px; border-style: solid;";
               idModificar=id;
              var  nombrearticulo = document.getElementById("nombrearticulo"+id).innerHTML;
@@ -1006,47 +1005,105 @@ function deleteArticuloDeficiente() {
             });
 }
 
+var respuestaSerie;
+function obtenerSerie(valor) {
+
+    $.post('../Business/Articulos/articulosAction.php', {
+
+        accion: 'obtenerSerie',
+        serie: valor
+
+
+    },
+            function (responseText) {
+                if(responseText==1){
+                 respuestaSerie = responseText;
+                   }else{
+                    respuestaSerie=responseText;
+                   }
+            });
+}
 
 function validarInputNombre(input){
   var contenido=input.value;
+    var  emailRegex =  /^[A-Za-zÁÉÍÓÚáéíóúñÑ0-9\_\-\.\s\\xF1\xD1]/;
+      var espacios= /^[+|\s]+$/;
   //Se muestra un texto a modo de ejemplo, luego va a ser un icono
-  if(input.value.length > 0) {
+  if(!espacios.test(contenido) && emailRegex.test(contenido)) {
     with (input.style) {
-        borderColor="#81F79F";
-        borderWidth = "3px";
-        borderStyle = "solid";
-    }
-  document.getElementById("nombre").innerHTML="";
+   borderColor="#81F79F";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+    document.getElementById('nombreok').innerHTML="";
 
   } else {
-      document.getElementById("nombre").innerHTML="campo vacio";
-      with (input.style) {
-      borderColor="#FA5858";
-      borderWidth = "3px";
-      borderStyle = "solid";
-      }
+
+    with (input.style) {
+   borderColor="#FA5858";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+  document.getElementById('nombreok').innerHTML="Valores invalidos";
   }
 }
 
 function validarInputSerie(input){
   var contenido=input.value;
+    var  emailRegex =  /^[A-Za-zÁÉÍÓÚáéíóúñÑ0-9\_\-\.\s\\xF1\xD1]/;
+      var espacios= /^[+|\s]+$/;
   //Se muestra un texto a modo de ejemplo, luego va a ser un icono
-  if (!/^([0-9])*$/.test(contenido)){
+  if(!espacios.test(contenido) && emailRegex.test(contenido)) {
+    obtenerSerie(contenido);
+    if(respuestaSerie == 1){
+       with (input.style) {
+   borderColor="#FA5858";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+  document.getElementById('serieok').innerHTML="Serie ya registrada en el sistema";
+    }else{
     with (input.style) {
-      document.getElementById("serie").innerHTML="campo vacio";
-      borderColor="#FA5858";
-      borderWidth = "3px";
-      borderStyle = "solid";
+   borderColor="#81F79F";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+    document.getElementById('serieok').innerHTML="";
     }
-  document.getElementById("serie").innerHTML="";
+
+} else {
+
+    with (input.style) {
+   borderColor="#FA5858";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+  document.getElementById('serieok').innerHTML="Valores invalidos";
+  }
+}
+
+function validarInputDescripcion(input){
+   var contenido=input.value;
+    var  emailRegex =  /^[A-Za-zÁÉÍÓÚáéíóúñÑ0-9\_\-\.\s\\xF1\xD1]/;
+      var espacios= /^[+|\s]+$/;
+  //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+  if(!espacios.test(contenido) && emailRegex.test(contenido)) {
+    with (input.style) {
+   borderColor="#81F79F";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+    document.getElementById('descripcionok').innerHTML="";
 
   } else {
-     with (input.style) {
-      borderColor="#81F79F";
-      borderWidth = "3px";
-      borderStyle = "solid";
-      }
-}
+
+    with (input.style) {
+   borderColor="#FA5858";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+  document.getElementById('descripcionok').innerHTML="Valores invalidos";
+  }
 }
 
 function habilitarRegistroArticulo(){
@@ -1064,5 +1121,73 @@ function habilitarRegistroArticulo(){
         document.getElementById("registrarArticulo1").disabled=false;
     }else{
       document.getElementById("registrarArticulo1").disabled=true;
+    }
+}
+
+////////////////////VALIDAR FORMULARIO MODIFICAR//////////////////////////////
+function validarInputNombre2(input){
+  var contenido=input.value;
+    var  emailRegex =  /^[A-Za-zÁÉÍÓÚáéíóúñÑ0-9\_\-\.\s\\xF1\xD1]/;
+      var espacios= /^[+|\s]+$/;
+  //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+  if(!espacios.test(contenido) && emailRegex.test(contenido)) {
+    with (input.style) {
+   borderColor="#81F79F";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+    document.getElementById('nombre2ok').innerHTML="";
+
+  } else {
+
+    with (input.style) {
+   borderColor="#FA5858";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+  document.getElementById('nombre2ok').innerHTML="Valores invalidos";
+  }
+}
+
+
+function validarInputDescripcion2(input){
+   var contenido=input.value;
+    var  emailRegex =  /^[A-Za-zÁÉÍÓÚáéíóúñÑ0-9\_\-\.\s\\xF1\xD1]/;
+      var espacios= /^[+|\s]+$/;
+  //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+  if(!espacios.test(contenido) && emailRegex.test(contenido)) {
+    with (input.style) {
+   borderColor="#81F79F";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+    document.getElementById('descripcion2ok').innerHTML="";
+
+  } else {
+
+    with (input.style) {
+   borderColor="#FA5858";
+   borderWidth = "3px";
+   borderStyle = "solid";
+  }
+  document.getElementById('descripcion2ok').innerHTML="Valores invalidos";
+  }
+}
+
+function habilitarModificarArticulo(){
+  var nombre;
+  var descripcion;
+
+    nombre=document.getElementById('nombre2').style;
+    descripcion= document.getElementById('descripcion2').style;
+
+
+  var correcto="rgb(129, 247, 159)";
+    if(nombre.borderColor == correcto &&  descripcion.borderColor == correcto){
+
+        //if(correcto=="rgb(129, 247, 159)"){
+        document.getElementById("btnModificar").disabled=false;
+    }else{
+      document.getElementById("btnModificar").disabled=true;
     }
 }

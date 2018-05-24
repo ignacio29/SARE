@@ -106,7 +106,7 @@ if($accion == "consultarNoticiaResidencial"){
    <!--COMENTAR-->
    <div class="row">
       <div class="col-75">
-         <input id="comentarioN"  onkeyup=" validarInputComentario(this)"  onchange="habilitarRegistroComentario()"
+         <input id="comentarioN"  onkeyup=" validarInputComentario(this);habilitarRegistroComentario();"  onchange="habilitarRegistroComentario()"
             mouseleave="habilitarRegistroComentario()" onfocusout="habilitarRegistroComentario()"
             type="text" class="form-control" placeholder="PUBLICAR COMENTARIO">
          <span id="comentarioSpan"></span>
