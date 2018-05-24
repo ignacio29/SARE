@@ -89,7 +89,7 @@ if (!isset($_SESSION['estudiante']) && !isset($_SESSION['usuario'])) {
             </li>
 
             <li>
-              <a href="#" onclick="ocultarCarrusel(1);cargarHorarios()" >CALSES<span class="icon-enter"></span></a>
+              <a href="#" onclick="ocultarCarrusel(1);cargarHorarios()" >CLASES<span class="icon-enter"></span></a>
             </li>
 
           </ul>

@@ -213,6 +213,9 @@ function consultarArticulo() {
 
 
 function cargarVistaModificarArticulo(id) {
+            document.getElementById('nombre2').style="border-color: rgb(129, 247, 159); border-width: 3px; border-style: solid;";
+             document.getElementById('serie2').style="border-color: rgb(129, 247, 159); border-width: 3px; border-style: solid;";
+              document.getElementById('descripcion2').style="border-color: rgb(129, 247, 159); border-width: 3px; border-style: solid;";
               idModificar=id;
              var  nombrearticulo = document.getElementById("nombrearticulo"+id).innerHTML;
              var seriearticulo = document.getElementById("seriearticulo"+id).innerHTML;
