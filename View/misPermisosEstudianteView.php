@@ -102,7 +102,7 @@ if (!isset($_SESSION["usuario"])) {
                            </div>
                            <div class="col-sm-1"></div>
                            <div class="col-sm-8">
-                              <textarea rows="4"  cols="30"  class="txtArea form-control" onkeyup="validarInputDetalles(this)" onfocusout="habilitarRegistroMensajes()"
+                              <textarea rows="4"  cols="30"  class="txtArea form-control" onkeyup="validarInputDetalles(this);habilitarRegistroMensajes();" onfocusout="habilitarRegistroMensajes()"
                                  placeholder="Ingrese un detalle del mensaje" type="text" id="detalle"></textarea><span id="detalles"></span>
                               <br>
                            </div>

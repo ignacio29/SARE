@@ -97,6 +97,18 @@ class articulosData {
           return $mensaje;
     }
 
+    public function obtenerSerie($serie){
+        $booleano = 0;
+        $conn = new mysqli($this->data->getServer(), $this->data->getUser(), $this->data->getPass(), $this->data->getDbName());
+        $result = $conn->query("SELECT * FROM tbarticulos WHERE seriearticulo='$serie'");
+
+        if (mysqli_num_rows($result) > 0) {
+            $booleano = 1;
+        }
+        mysqli_close($conn);
+        return $booleano;
+    }
+
     function updateTBArticulosPersonales($idArticulo,$nombre,$serie,$tipo,$descripcion,$estado,$aprobar) {
 
         $nombreArticulo= $nombre;

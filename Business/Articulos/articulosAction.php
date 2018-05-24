@@ -68,7 +68,13 @@
         echo $resultado = $articulosBussiness->consultarTBArticuloId($idArticulo);
 
     }
+//////////////////VALIDAR LA SERIE//////////////////////
+if ($actionArticulo == "obtenerSerie") {
+    $serie = $_POST['serie'];
 
+  echo  $result = $articulosBussiness->obtenerSerie($serie);
+
+}
 
     if($actionArticulo=="modificarArticulo"){
         $idArticulo = $_POST['id'];
