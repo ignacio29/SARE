@@ -311,8 +311,8 @@ session_start();
             <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> ¿ESTÁ SEGURO DE ELIMINAR EL HORARIO?</div>
          </div>
          <div class="modal-footer ">
-            <button type="button"  onclick="eliminarHorario();" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span>SI</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> NO</button>
+            <button type="button"  onclick="eliminarHorario();" ><span class="glyphicon glyphicon-ok-sign"></span>SI</button>
+            <button type="button"  data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> NO</button>
          </div>
       </div>
       <!-- /.modal-content -->
@@ -333,8 +333,8 @@ session_start();
             <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> ¿ESTÁ SEGURO DE CONFIRMAR EL HORARIO? SI PRESIONA "SÍ" SE LE ASIGNARA EL HORARIO DE LIMPIEZA Y LAVANDERÍA, PERO NO PUEDE AGREGAR O EDITAR MÁS HORARIOS</div>
          </div>
          <div class="modal-footer ">
-            <button type="button"  onclick="asignarHorarioLimpieza();" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span>SI</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> NO</button>
+            <button type="button"  onclick="asignarHorarioLimpieza();"  ><span class="glyphicon glyphicon-ok-sign"></span>SI</button>
+            <button type="button"  data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> NO</button>
          </div>
       </div>
       <!-- /.modal-content -->
