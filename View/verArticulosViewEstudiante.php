@@ -134,7 +134,7 @@ session_start();
                            </div>
                            <div class="col-sm-1"></div>
                            <div class="col-sm-6">
-                              <input type="text" class="form-control" id="serie" onkeyup="validarInputSerie(this);habilitarRegistroArticulo();"><span id="serieok" onfocusout="habilitarRegistroArticulo();"></span>
+                              <input type="text" class="form-control" id="serie" onkeyup="validarInputSerie(this);habilitarRegistroArticulo();" onfocusout="habilitarRegistroArticulo();"><span id="serieok"></span>
                            </div>
                            <div class="col-sm-12"><br></div>
                            <div class="col-sm-1"></div>
@@ -156,7 +156,7 @@ session_start();
                            </div>
                            <div class="col-sm-1"></div>
                            <div class="col-sm-6">
-                              <textarea rows="2"  cols="20" class="txtArea form-control"  type="text" id="descripcion" onkeyup="validarInputDescripcion(this);habilitarRegistroArticulo();" onfocusout="habilitarRegistroArticulo();>
+                              <textarea rows="2"  cols="20" class="txtArea form-control"  type="text" id="descripcion" onkeyup="validarInputDescripcion(this);habilitarRegistroArticulo();" onfocusout="habilitarRegistroArticulo();">
                               </textarea><span id="descripcionok"></span>
                               <br>
                            </div>
@@ -208,7 +208,7 @@ session_start();
                            </div>
                            <div class="col-sm-1"></div>
                            <div class="col-sm-6">
-                              <input class="form-control" type="text" id="nombre2" onkeyup="validarInputNombre2(this);habilitarModificarArticulo();" onfocusout="habilitarModificarArticulo();"> <span id="nombre2ok"></span>
+                              <input class="form-control" type="text" id="nombreE" onkeyup="validarInputNombre2(this);habilitarModificarArticulo();" onfocusout="habilitarModificarArticulo();" > <span id="nombre2ok"></span>
                            </div>
                            <div class="col-sm-12"><br></div>
                            <div class="col-sm-1"></div>

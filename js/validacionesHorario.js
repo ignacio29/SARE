@@ -1,6 +1,6 @@
   function validarCurso(input){
     var contenido=input.value;
-  var  emailRegex =  /^[A-Za-zÁÉÍÓÚáéíóúñÑ0-9\_\-\.\xF1\xD1]+$/;
+  var  emailRegex =  /^[A-Za-zÁÉÍÓÚáéíóúñÑ0-9\_\-\.\s\xF1\xD1]+$/;
   var espacios= /^[+|\s]+$/;
   //Se muestra un texto a modo de ejemplo, luego va a ser un icono
   if(!espacios.test(contenido) && emailRegex.test(contenido) ) {
