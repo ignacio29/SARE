@@ -213,8 +213,8 @@ function consultarArticulo() {
 
 
 function cargarVistaModificarArticulo(id) {
-            document.getElementById('nombre2').style="border-color: rgb(129, 247, 159); border-width: 3px; border-style: solid;";
-              document.getElementById('descripcion2').style="border-color: rgb(129, 247, 159); border-width: 3px; border-style: solid;";
+            document.getElementById('nombreE').style="border-color: rgb(129, 247, 159); border-width: 3px; border-style: solid;";
+            document.getElementById('descripcion2').style="border-color: rgb(129, 247, 159); border-width: 3px; border-style: solid;";
               idModificar=id;
              var  nombrearticulo = document.getElementById("nombrearticulo"+id).innerHTML;
              var seriearticulo = document.getElementById("seriearticulo"+id).innerHTML;
@@ -224,7 +224,7 @@ function cargarVistaModificarArticulo(id) {
 
              //alert(estadoarticulo);
 
-             document.getElementById("nombre2").value = nombrearticulo;
+             document.getElementById("nombreE").value = nombrearticulo;
              document.getElementById("serie2").value = seriearticulo;
 
              var selectTipo = document.getElementById("tipo2");//llamo al select
@@ -270,7 +270,7 @@ function modificarArticulo() {
 
             accion: 'modificarArticulo',
             id:idModificar,
-            nombre:document.getElementById('nombre2').value,
+            nombre:document.getElementById('nombreE').value,
             serie: document.getElementById('serie2').value,
             tipo:  document.getElementById('tipo2').value,
             descripcion: document.getElementById('descripcion2').value,
@@ -297,7 +297,7 @@ function modificarArticuloInstitucional() {
 
             accion: 'modificarArticuloInstitucional',
             id:idModificar,
-            nombre:document.getElementById('nombre2').value,
+            nombre:document.getElementById('nombreE').value,
             serie: document.getElementById('serie2').value,
             tipo:  document.getElementById('tipo2').value,
             descripcion: document.getElementById('descripcion2').value,
@@ -324,7 +324,7 @@ function modificarArticuloPersonal() {
 
             accion: 'modificarArticuloPersonal',
             id:idModificar,
-            nombre:document.getElementById('nombre2').value,
+            nombre:document.getElementById('nombreE').value,
             serie: document.getElementById('serie2').value,
             tipo:  document.getElementById('tipo2').value,
             descripcion: document.getElementById('descripcion2').value,
@@ -1178,7 +1178,7 @@ function habilitarModificarArticulo(){
   var nombre;
   var descripcion;
 
-    nombre=document.getElementById('nombre2').style;
+    nombre=document.getElementById('nombreE').style;
     descripcion= document.getElementById('descripcion2').style;
 
 
