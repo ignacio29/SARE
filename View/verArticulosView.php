@@ -131,7 +131,7 @@ session_start();
                          </div>
                          <div class="col-sm-1"></div>
                          <div class="col-sm-6">
-                            <input type="text" class="form-control" id="serie" onkeyup="validarInputSerie(this);habilitarRegistroArticulo()" onfocusout="habilitarRegistroArticulo()"><span id="serieok"></span>
+                            <input type="text" class="form-control" id="serie" onkeyup="validarInputSerie(this);habilitarRegistroArticulo()" onfocusout="validarInputSerie(this);habilitarRegistroArticulo()"><span id="serieok"></span>
                          </div>
                          <div class="col-sm-12"><br></div>
                          <div class="col-sm-1"></div>
@@ -264,7 +264,7 @@ session_start();
                 </form>
              </div>
              <div class="modal-footer ">
-                <button type="button" id="registrarArticulo" onclick="modificarArticuloInstitucional()">GUARDAR</button>
+                <button type="button" id="btnModificar" onclick="modificarArticuloInstitucional()">GUARDAR</button>
              </div>
           </div>
           <!-- /.modal-content -->
