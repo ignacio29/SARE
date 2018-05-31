@@ -448,5 +448,5 @@ if($accion="verDatosReporte"){
        $rol=$_SESSION['estudiante'];
     }
     echo $result = $usuariosBusiness->verDatosReporte($_SESSION['usuario'],$rol);
-  } 
+  }
 ?>

@@ -1,19 +1,19 @@
 <?php
 session_start();
 ?>
-<div class="container"> 
+<div class="container">
     <header>
         <h2>ESTUDIANTES RESIDENTES</h2>
     </header>
-    <br> 
+    <br>
       <table class="default table table-bordered table-striped"  content="width=device-width" >
          <thead>
             <?php
               if (isset($_SESSION['administrador']) && isset($_SESSION['usuario'])) {
                echo '<th>
-           
+
                   <button data-title="Edit" data-toggle="modal" data-target="#registrarEstudiante"  >AGREGAR</button>
-           
+
                   </th>';
             }
            ?>
@@ -29,7 +29,7 @@ session_start();
                    </a>
                    <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                     <li class="dropdownMenu"><a href="#" onclick="verEstudiante();">TODOS</a></li>
-                    <li class="divider"></li>                    
+                    <li class="divider"></li>
                       <li class="dropdown-submenu">
                          <a href="#">CEDULA</a>
                          <ul class="dropdown-menu">
@@ -118,10 +118,10 @@ session_start();
             </th>
 
          </thead>
-      </table>  
+      </table>
 
 
-     
+
      <div class="col-md-12">
       <br>
       <div id="" class="table-responsive">
@@ -140,9 +140,9 @@ session_start();
                   if (isset($_SESSION['administrador'])) {
                     echo '<th style="width:5%">ACTUALIZAR</th>
                     <th style="width:5%">ELIMINAR</th>';
-                  }; 
-                  
-                  
+                  };
+
+
                   ?>
             </thead>
             <tbody id="contenidoResidentes">
@@ -179,7 +179,7 @@ session_start();
        </div>
     </div>
 
-     
+
 
 
 
@@ -211,7 +211,7 @@ session_start();
                       <label for="lname">NOMBRE</label>
                    </div>
                    <div class="col-75">
-                     <input type="text" class="form-control" onkeyup="validarNombre(this)" onfocusout="habilitarRegistroEstudiante();" id="nombreEstudiante"> <span id="nombreok"></span>    
+                     <input type="text" class="form-control" onkeyup="validarNombre(this)" onfocusout="habilitarRegistroEstudiante();" id="nombreEstudiante"> <span id="nombreok"></span>
                    </div>
                 </div>
                 <div class="row">
@@ -303,7 +303,7 @@ session_start();
               </form>
            </div>
 
-              <div class="modal-footer "> 
+              <div class="modal-footer ">
                     <button type="button" id="registrarEstudianteAdmi" onclick="registarEstudianteAdmin();" disabled >GUARDAR
                     </button>
               </div>
@@ -331,7 +331,7 @@ session_start();
                            <label for="lname">C&EacuteDULA</label>
                         </div>
                         <div class="col-75">
-                            <input class="form-control" editable="false" type="text" id="editarCedula" 
+                            <input class="form-control" editable="false" type="text" id="editarCedula"
                               onkeyup="caracteres()"><span id="cedulaok"></span>
                         </div>
                      </div>
@@ -340,7 +340,7 @@ session_start();
                            <label for="lname">NOMBRE</label>
                         </div>
                         <div class="col-75">
-                             <input type="text" class="form-control" id="editarNombre">  
+                             <input type="text" class="form-control" id="editarNombre">
                         </div>
                      </div>
                      <div class="row">
@@ -364,7 +364,7 @@ session_start();
                            <label for="lname">SEXO</label>
                         </div>
                         <div class="col-75">
-                           <input type="radio"  name="gender" value="M" checked> MASCULINO<br>
+                           <input type="radio"  name="gender" value="M" checked> MASCULINO <br>
                            <input type="radio" name="gender" value="F"> FEMENINO<br>
                            <input type="radio"  name="gender" value="O"> OTRO
                         </div>
@@ -408,10 +408,10 @@ session_start();
                           <input type="radio" name="access"  id="editarAcesso2" value="0"> NO<br>
                         </div>
                      </div>
-                                            
+
                   </form>
                </div>
-               <div class="modal-footer "> 
+               <div class="modal-footer ">
                    <button type="button" id="registrarEstudiante2" onclick="actualizarEstudianteAdmin();" >GUARDAR</button>
                </div>
                <!-- /.modal-content -->
@@ -421,7 +421,7 @@ session_start();
       </div>
       <!-- /.fin -->
 
- 
+
   <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
    <div class="modal-dialog">
       <div class="modal-content">
@@ -446,5 +446,5 @@ session_start();
    </div>
    <!-- /.modal-dialog -->
 </div>
- 
+
 </div>
