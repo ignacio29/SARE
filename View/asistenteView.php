@@ -11,7 +11,7 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
     }
 }
 ?>
- 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,23 +21,23 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
   <link rel="stylesheet" href="../css/estilos.css">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-  
+
   <link rel="stylesheet" href="../css/dropdow.css">
   <link rel="stylesheet" href="../css/alertify.core.css" />
   <link rel="stylesheet" href="../css/alertify.default.css" />
-  <link rel="stylesheet" href="../css/perfil.css" />  
-  <link rel="stylesheet" href="../css/fonts.css"> 
+  <link rel="stylesheet" href="../css/perfil.css" />
+  <link rel="stylesheet" href="../css/fonts.css">
 
-   
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+
 
   <script src="../bootstrap/js/jquery.min.js"></script>
   <script src="../bootstrap/js/Jquery.js"></script>
 
-  
-  <script src="../js/main.js"></script> 
+
+  <script src="../js/main.js"></script>
   <script src="../js/sesiones.js"></script>
 
   <script src="../js/cargarContenido.js" type="text/javascript"></script>
@@ -45,10 +45,10 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
   <script src="../js/validacionesFormularios.js" type="text/javascript"></script>
   <script src="../js/jquery.js" type="text/javascript"></script>
 
- 
+
   <script src="../js/alertify.js" type="text/javascript"></script>
   <script src="../js/agregarHorarioJS.js" type="text/javascript"></script>
-  <script src="../js/alertas.js" type="text/javascript"></script>  
+  <script src="../js/alertas.js" type="text/javascript"></script>
   <script src="../js/permisos.js" type="text/javascript"></script>
   <script src="../js/reportesHorarios.js" type="text/javascript"></script>
   <script src="../js/articulos.js" type="text/javascript"></script>
@@ -58,18 +58,18 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
   <script language="javascript">
   window.onload = verDatosReporte();
   </script>
-  <script src="../js/paginationtda.js" type="text/javascript"></script> 
+  <script src="../js/paginationtda.js" type="text/javascript"></script>
 
 </head>
 <body>
   <header>
-    
-    <div class="menu_bar"> 
+
+    <div class="menu_bar">
       <a href="#" class="btn-menu"><span class="icon-menu"></span>MENU</a>
     </div>
     <nav>
     <div class="logo">
-      <img src="../imagenes/logoSare4.png" WIDTH=180 HEIGHT=110 alt=""> 
+      <img src="../imagenes/logoSare4.png" WIDTH=180 HEIGHT=110 alt="">
     </div>
       <ul>
         <li><a href="asistenteView.php" onclick="ocultarCarrusel(2)"><span class="icon-home"></span>INICIO</a></li>
@@ -106,7 +106,7 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
             <li>
               <a href="#" onclick="ocultarCarrusel(1);cargarMensajes('aviso')">AVISOS<span class="icon-enter"></span></a>
             </li>
-            
+
             <li>
               <a href="#" onclick="ocultarCarrusel(1);cargarMensajes('permiso')">PERMISOS<span class="icon-enter"></span></a>
             </li>
@@ -125,7 +125,7 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
             <li>
               <a href="#" onclick="ocultarCarrusel(1);cargaContenidoVerArticulosInstitucionales()">INSTITUCIONALES<span class="icon-enter"></span></a>
             </li>
-            
+
             <li>
               <a href="#" onclick="ocultarCarrusel(1);cargaContenidoVerArticulosPersonales()">PERSONALES<span class="icon-enter"></span></a>
             </li>
@@ -145,7 +145,7 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
             <li><a href="#" onclick="ocultarCarrusel(1);cargarAsistentes()">ASISTENTES<span class="icon-enter"></span></a></li>
              -->
             <li><a href="#" onclick="ocultarCarrusel(1);cargarResidentes()">RESIDENTES<span class="icon-enter"></span></a></li>
-            
+
           </ul>
         </li>
 
@@ -154,7 +154,7 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
         </li>
 
         <li class="submenu">
-          <a href="cerrarSesion.php""><span class="icon-exit"></span>SALIR</a>
+          <a href="cerrarSesion.php"><span class="icon-exit"></span>SALIR</a>
         </li>
       </ul>
     </nav>
@@ -166,7 +166,7 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
 
         <!-- Intro -->
           <section id="top" class="one">
-            <div class="container"> 
+            <div class="container">
               <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -191,10 +191,10 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
 
                   <div class="item">
                     <a href="#" class="image fit"><img src="../imagenes/inicioArticulos.JPG" alt="Articulos" style="width:100%;"></a>
-                  </div>    
+                  </div>
 
                   <div class="item">
-                    
+
                     <a href="#" class="image fit"><img src="../imagenes/inicioResidentes.JPG" alt="Estudiantes" style="width:100%;"></a>
                   </div>
 
@@ -215,10 +215,10 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
 
         <!-- Portfolio -->
           <section id="contenido" class="two">
-            
-            
-          </section> 
-        
+
+
+          </section>
+
       </div>
 
 
@@ -265,24 +265,30 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
                    <div class="col-md-9">
                       <div class="input-group">
                          <span class="input-group-addon">1ER APELLIDO</span>
-                         <input type="text" class="form-control"  id="editarPrimerA">
+                         <input type="text" class="form-control"  onkeyup="validarPrimerAPerfil(this);habilitarActualizacionPerfilAsistente()" onfocusout="validarPrimerAPerfil(this);habilitarActualizacionPerfilAsistente()" class="form-control"  id="editarPrimerA">
+
                       </div>
+                       <span id="primerAokPerfil"></span>
                    </div>
                    <div class="col-md-12"></div>
                    <div class="col-md-2"></div>
                    <div class="col-md-9">
                       <div class="input-group">
                          <span class="input-group-addon"> 2NDO APELLIDO</span>
-                         <input type="text" class="form-control"  id="editarSegundoA" >
+                         <input type="text" class="form-control"  onkeyup="validarSegundoAPerfil(this);habilitarActualizacionPerfilAsistente()" onfocusout="validarSegundoAPerfil(this);habilitarActualizacionPerfilAsistente()" class="form-control"  id="editarSegundoA" >
+
                       </div>
+                       <span id="segundoAokPerfil"></span>
                    </div>
                    <div class="col-md-12"></div>
                    <div class="col-md-2"></div>
                    <div class="col-md-9">
                       <div class="input-group">
                          <span class="input-group-addon"> NOMBRE</span>
-                         <input type="text" class="form-control"  id="editarNombre" >
+                         <input type="text" class="form-control"  onkeyup="validarNombrePerfil(this);habilitarActualizacionPerfilAsistente()"  onfocusout="validarNombrePerfil(this);habilitarActualizacionPerfilAsistente()" id="editarNombre" >
+
                       </div>
+                       <span id="nombreokPerfil"></span>
                    </div>
                    <div class="col-md-12"></div>
                    <div class="col-md-2"></div>
@@ -298,7 +304,7 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
                    </div>
                    <div class="col-md-12"></div>
                    <div class="col-md-4"></div>
-                   <div class="col-md-2"><br><button class="boton" onclick="actualizarAsistentePerfil();">GUARDAR</button></div>
+                   <div class="col-md-2"><br><button class="boton"  id ="actualiPerfilAsis"onclick="actualizarAsistentePerfil();" >GUARDAR</button></div>
                    <div class="col-md-12"></div>
                 </div>
              </div>
@@ -310,7 +316,7 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
 
     <!-- Footer -->
       <div id="footer">
- 
+
         <!-- Copyright -->
         <ul class="copyright">
           <li><p id="textofinal">SISTEMA DE ADMINISTRACION DE RESIDENCIAS ESTUDIANTILES</p></li>
@@ -321,12 +327,12 @@ if (!isset($_SESSION['asistente']) && !isset($_SESSION['usuario'])) {
           <li>&copy; Untitled. All rights reserved.</li>
           <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
-          
+
 
       </div>
 
 </div>
 
-      
+
 </body>
 </html>

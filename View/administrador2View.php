@@ -22,22 +22,22 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 	<link rel="stylesheet" href="../css/estilos.css">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-  
+
 	<link rel="stylesheet" href="../css/dropdow.css">
 	<link rel="stylesheet" href="../css/alertify.core.css" />
 	<link rel="stylesheet" href="../css/alertify.default.css" />
-	<link rel="stylesheet" href="../css/perfil.css" />	
-	<link rel="stylesheet" href="../css/fonts.css"> 
+	<link rel="stylesheet" href="../css/perfil.css" />
+	<link rel="stylesheet" href="../css/fonts.css">
 
-	 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
+
 
 	<script src="../bootstrap/js/jquery.min.js"></script>
 	<script src="../bootstrap/js/Jquery.js"></script>
 
-  
+
 	<script src="../js/main.js"></script>
 	<script scr="../js/jsContenido.js"></script>
 	<script src="../js/sesiones.js"></script>
@@ -47,10 +47,10 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 	<script src="../js/validacionesFormularios.js" type="text/javascript"></script>
 	<script src="../js/jquery.js" type="text/javascript"></script>
 
- 
+
 	<script src="../js/alertify.js" type="text/javascript"></script>
 	<script src="../js/agregarHorarioJS.js" type="text/javascript"></script>
-	<script src="../js/alertas.js" type="text/javascript"></script>  
+	<script src="../js/alertas.js" type="text/javascript"></script>
 	<script src="../js/permisos.js" type="text/javascript"></script>
 	<script src="../js/reportesHorarios.js" type="text/javascript"></script>
 	<script src="../js/articulos.js" type="text/javascript"></script>
@@ -60,18 +60,18 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 	<script language="javascript">
 	window.onload = verDatosReporte();
 	</script>
-	<script src="../js/paginationtda.js" type="text/javascript"></script> 
+	<script src="../js/paginationtda.js" type="text/javascript"></script>
 
 </head>
 <body>
 	<header>
-		
-		<div class="menu_bar"> 
+
+		<div class="menu_bar">
 			<a href="#" class="btn-menu"><span class="icon-menu"></span>MENU</a>
 		</div>
 		<nav>
 		<div class="logo">
-			<img src="../imagenes/logoSare4.png" WIDTH=180 HEIGHT=110 alt=""> 
+			<img src="../imagenes/logoSare4.png" WIDTH=180 HEIGHT=110 alt="">
 		</div>
 			<ul>
 				<li><a href="administrador2View.php" onclick="ocultarCarrusel(2)"><span class="icon-home"></span>INICIO</a></li>
@@ -108,11 +108,11 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 						<li>
 							<a href="#" onclick="ocultarCarrusel(1);cargarMensajes('aviso')">AVISOS<span class="icon-enter"></span></a>
 						</li>
-						
+
 						<li>
 							<a href="#" onclick="ocultarCarrusel(1);cargarMensajes('permiso')">PERMISOS<span class="icon-enter"></span></a>
 						</li>
-						
+
 						<li>
 							<a href="#" onclick="ocultarCarrusel(1);cargarMensajes('queja')">QUEJAS<span class="icon-enter"></span></a>
 						</li>
@@ -126,11 +126,11 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 						<li>
 							<a href="#" onclick="ocultarCarrusel(1);cargaContenidoVerArticulosInstitucionales()">INSTITUCIONALES<span class="icon-enter"></span></a>
 						</li>
-						
+
 						<li>
 							<a href="#" onclick="ocultarCarrusel(1);cargaContenidoVerArticulosPersonales()">PERSONALES<span class="icon-enter"></span></a>
 						</li>
-						
+
 						<li>
 							<a href="#" onclick="ocultarCarrusel(1);cargaContenidoVerArticulosDeficientes()">DEFICIENTES<span class="icon-enter"></span></a>
 						</li>
@@ -147,11 +147,11 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 				</li>
 
 				<li class="submenu">
-					<a href="#"  data-toggle="modal" data-target="#myModal2"    onclick="cargarPerfil('<?php echo $_SESSION['usuario']?>','<?php echo $_SESSION['administrador']?>')"><span class="icon-profile"></span>PERFIL</a>
+					<a href="#"  data-toggle="modal" data-target="#myModal2"    onclick="cargarPerfil('<?php print $_SESSION['usuario']?>','<?php print $_SESSION['administrador']?>')"><span class="icon-profile"></span>PERFIL</a>
 				</li>
 
 				<li class="submenu">
-					<a href="cerrarSesion.php" onclick="ocultarCarrusel(1);cargarPerfil('<?php echo $_SESSION['usuario']?>','<?php echo $_SESSION['administrador']?>')"><span class="icon-exit"></span>SALIR</a>
+					<a href="cerrarSesion.php"><span class="icon-exit"></span>SALIR</a>
 				</li>
 			</ul>
 		</nav>
@@ -163,7 +163,7 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 
 				<!-- Intro -->
 					<section id="top" class="one">
-						<div class="container"> 
+						<div class="container">
 							<div id="myCarousel" class="carousel slide" data-ride="carousel">
 								<!-- Indicators -->
 								<ol class="carousel-indicators">
@@ -188,10 +188,10 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 
 									<div class="item">
 										<a href="#" class="image fit"><img src="../imagenes/inicioArticulos.JPG" alt="Articulos" style="width:100%;"></a>
-									</div>		
+									</div>
 
 									<div class="item">
-										
+
 										<a href="#" class="image fit"><img src="../imagenes/inicioResidentes.JPG" alt="Estudiantes" style="width:100%;"></a>
 									</div>
 
@@ -212,10 +212,10 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 
 				<!-- Portfolio -->
 					<section id="contenido" class="two">
-						
-						
-					</section> 
-				
+
+
+					</section>
+
 			</div>
 
 <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
@@ -255,30 +255,33 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
                   </div>
                </div>
                <div class="col-md-12"></div>
-               <div class="col-md-2"></div>
-               <div class="col-md-9">
-                  <div class="input-group">
-                     <span class="input-group-addon">1ER APELLIDO</span>
-                     <input type="text" class="form-control"  id="editarPrimerA">
-                  </div>
-               </div>
-               <div class="col-md-12"></div>
-               <div class="col-md-2"></div>
-               <div class="col-md-9">
-                  <div class="input-group">
-                     <span class="input-group-addon"> 2NDO APELLIDO</span>
-                     <input type="text" class="form-control"  id="editarSegundoA" >
-                  </div>
-               </div>
-               <div class="col-md-12"></div>
-               <div class="col-md-2"></div>
-               <div class="col-md-9">
-                  <div class="input-group">
-                     <span class="input-group-addon"> NOMBRE</span>
-                     <input type="text" class="form-control"  id="editarNombre" >
-                  </div>
-               </div>
-            </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-9">
+                 <div class="input-group">
+                    <span class="input-group-addon">1ER APELLIDO</span>
+                    <input type="text" onkeyup="validarPrimerAPerfil(this);habilitarActualizacionAdministrador()" onfocusout="validarPrimerAPerfil(this);habilitarActualizacionAdministrador()" class="form-control"  id="editarPrimerA">
+                    <span id="primerAokPerfil"></span>
+                 </div>
+              </div>
+              <div class="col-md-12"></div>
+              <div class="col-md-2"></div>
+              <div class="col-md-9">
+                 <div class="input-group">
+                    <span class="input-group-addon"> 2NDO APELLIDO</span>
+                    <input type="text" onkeyup="validarSegundoAPerfil(this);habilitarActualizacionAdministrador()" onfocusout="validarSegundoAPerfil(this);habilitarActualizacionAdministrador()" class="form-control"  id="editarSegundoA" >
+                    <span id="segundoAokPerfil"></span>
+                 </div>
+              </div>
+              <div class="col-md-12"></div>
+              <div class="col-md-2"></div>
+              <div class="col-md-9">
+                 <div class="input-group">
+                    <span class="input-group-addon"> NOMBRE</span>
+                    <input type="text" class="form-control" onkeyup="validarNombrePerfil(this);habilitarActualizacionAdministrador()"  onfocusout="validarNombrePerfil(this);habilitarActualizacionAdministrador()" id="editarNombre" >
+                    <span id="nombreokPerfil"></span>
+                 </div>
+              </div>
+           </div>
             <div class="col-md-12"></div>
             <div class="col-md-4"></div>
             <div class="col-md-2"><br><button class="boton" onclick="actualizarAdministrador()">ACTUALIZAR</button></div>
@@ -290,7 +293,7 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 <!-- modal-content -->
 		<!-- Footer -->
 			<div id="footer">
- 
+
 				<!-- Copyright -->
 				<ul class="copyright">
 					<li><p id="textofinal">SISTEMA DE ADMINISTRACION DE RESIDENCIAS ESTUDIANTILES</p></li>
@@ -301,12 +304,12 @@ if (!isset($_SESSION['administrador']) && !isset($_SESSION['usuario'])) {
 					<li>&copy; Untitled. All rights reserved.</li>
 					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 				</ul>
-					
+
 
 			</div>
 
 </div>
 
-			
+
 </body>
 </html>

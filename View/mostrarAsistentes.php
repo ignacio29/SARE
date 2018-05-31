@@ -1,11 +1,11 @@
 <?php
 session_start();
 ?>
-<div class="container"> 
+<div class="container">
     <header>
         <h2>ESTUDIANTES ASISTENTES</h2>
     </header>
-    <br> 
+    <br>
       <table class="default table table-bordered table-striped"  content="width=device-width" >
          <thead>
            <th >
@@ -24,7 +24,7 @@ session_start();
                  </a>
                  <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                     <li class="dropdownMenu"><a href="#" onclick="verAsistente();">TODOS</a></li>
-                    <li class="divider"></li>                 
+                    <li class="divider"></li>
                     <li class="dropdown-submenu">
                        <a href="#">CEDULA</a>
                        <ul class="dropdown-menu">
@@ -80,10 +80,10 @@ session_start();
             </th>
 
          </thead>
-      </table>  
+      </table>
 
 
-     
+
      <div class="col-md-12">
       <br>
       <div id="" class="table-responsive">
@@ -101,6 +101,7 @@ session_start();
               </tbody>
          </table>
       </div>
+
       </div>
       <center>
          <div class=" contenedor_paginacion">
@@ -148,7 +149,7 @@ session_start();
                     <label for="lname">C&EacuteDULA</label>
                  </div>
                  <div class="col-75">
-                  <input class="form-control" type="text" id="cedulaEstudiante" onkeyup="caracteres()" onfocusout="habilitarRegistroAsistente();">   <span id="cedulaok"></span> 
+                  <input class="form-control" type="text" id="cedulaEstudiante" onkeyup="caracteres()" onfocusout="habilitarRegistroAsistente();">   <span id="cedulaok"></span>
                  </div>
               </div>
               <div class="row">
@@ -244,7 +245,7 @@ session_start();
                     <label for="lname">C&EacuteDULA</label>
                  </div>
                  <div class="col-75">
-                 <input class="form-control" type="text" id="editarCedula" onkeyup="caracteres()" disabled=""><span id="cedulaok"></span> 
+                 <input class="form-control" type="text" id="editarCedula" onkeyup="caracteres()" disabled=""><span id="cedulaok"></span>
                  </div>
               </div>
               <div class="row">
@@ -252,7 +253,8 @@ session_start();
                     <label for="lname">NOMBRE</label>
                  </div>
                  <div class="col-75">
-                    <input type="text" class="form-control" id="editarNombre">
+                    <input type="text" class="form-control" onfocusout="validarNombreActualizar(this)" onkeyup="validarNombreActualizar(this);habilitarActualizacionAsistente" id="editarNombre">
+                    <span id="nombreok"></span>
                  </div>
               </div>
               <div class="row">
@@ -260,7 +262,9 @@ session_start();
                     <label for="lname">APELLIDO 1</label>
                  </div>
                  <div class="col-75">
-                     <input type="text" class="form-control" id="editarPrimerA">
+                     <input type="text" class="form-control" id="editarPrimerA" onkeyup="validarPrimerActualizar(this);habilitarActualizacionAsistente()" onfocusout="validarPrimerActualizar(this);habilitarActualizacionAsistente()"
+
+                     <span id="primerAok"></span>
                  </div>
               </div>
               <div class="row">
@@ -268,7 +272,8 @@ session_start();
                     <label for="lname">APELLIDO 2</label>
                  </div>
                  <div class="col-75">
-                      <input type="text" class="form-control" id="editarSegundoA">
+                      <input type="text" onfocusout="validarSegundoActualizar(this);habilitarActualizacionAsistente()" onkeyup="validarSegundoActualizar(this);habilitarActualizacionAsistente()" class="form-control" id="editarSegundoA">
+                      <span="segundoAok"></span>
                  </div>
               </div>
               <div class="row">
@@ -280,11 +285,11 @@ session_start();
                    <input type="radio" name="gender" value="F"> FEMENINO<br>
                    <input type="radio"  name="gender" value="O">  OTRO
                  </div>
-              </div> 
+              </div>
 
             </form>
          </div>
-        <div class="modal-footer "> 
+        <div class="modal-footer ">
           <button type="button" id="registrarEstudiante2" onclick="actualizarAsistenteAdmin()" >GUARDAR</button>
         </div>
          <!-- /.modal-content -->
@@ -294,7 +299,7 @@ session_start();
 </div>
 <!-- /.fin -->
 
- 
+
  <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
    <div class="modal-dialog">
       <div class="modal-content">
@@ -319,7 +324,5 @@ session_start();
    </div>
    <!-- /.modal-dialog -->
 </div>
- 
-</div>
 
- 
+</div>

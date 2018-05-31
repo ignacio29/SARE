@@ -4,6 +4,39 @@ var correo="";
 function asignarRespuestaCorreo(ajax){
   correo=ajax;
 }
+function validarCorreoIndex(input){
+  var contenido=input.value;
+
+
+var  emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+//Se muestra un texto a modo de ejemplo, luego va a ser un icono
+if (emailRegex.test(contenido)&&contenido!=null) {
+
+      with (input.style) {
+     borderColor="#81F79F";
+     borderWidth = "3px";
+     borderStyle = "solid";}
+
+
+document.getElementById('estadoCorreo').innerHTML="";
+
+
+
+
+
+
+
+
+}else{
+
+  with (input.style) {
+ borderColor="#FA5858";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+document.getElementById('estadoCorreo').innerHTML="Formato incorrecto o incompleto";
+}
+}
 function validarCorreoInstitucional(input){
 
 campo = input.value;
@@ -45,7 +78,7 @@ function validarPassword(){
     console.log(validopass);
   if(validoCorreo=="valido"&&validoCedula=="valido"&&validopass=="valido"){
   					registarEstudiante();
-  }else{ 
+  }else{
   }
   }
   function caracteres(){
@@ -423,5 +456,339 @@ console.log(  document.getElementById('registrarEstudianteAdmi'));
   console.log(  document.getElementById('registrarEstudianteAdmi'));
 }
 
+
+}
+
+function validarNombrePerfil(input){
+  var contenido=input.value;
+  console.log(contenido);
+var  emailRegex =  /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+//Se muestra un texto a modo de ejemplo, luego va a ser un icono
+if(input.value.length > 0 &&emailRegex.test(contenido) ) {
+  with (input.style) {
+ borderColor="#81F79F";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+  document.getElementById('nombreokPerfil').innerHTML="";
+
+} else {
+
+  with (input.style) {
+ borderColor="#FA5858";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+document.getElementById('nombreokPerfil').innerHTML="Valores invalidos";
+}
+
+
+}
+function validarPrimerAPerfil(input){
+  var contenido=input.value;
+  console.log(contenido);
+var  emailRegex =  /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+//Se muestra un texto a modo de ejemplo, luego va a ser un icono
+if(input.value.length > 0 &&emailRegex.test(contenido) ) {
+  with (input.style) {
+ borderColor="#81F79F";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+  document.getElementById('primerAokPerfil').innerHTML="";
+
+} else {
+
+  with (input.style) {
+ borderColor="#FA5858";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+document.getElementById('primerAokPerfil').innerHTML="Valores invalidos";
+}
+
+
+}
+
+
+function validarSegundoAPerfil(input){
+  var contenido=input.value;
+  console.log(contenido);
+var  emailRegex =  /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+//Se muestra un texto a modo de ejemplo, luego va a ser un icono
+if(input.value.length > 0 &&emailRegex.test(contenido) ) {
+  with (input.style) {
+ borderColor="#81F79F";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+  document.getElementById('segundoAokPerfil').innerHTML="";
+
+} else {
+
+  with (input.style) {
+ borderColor="#FA5858";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+document.getElementById('segundoAokPerfil').innerHTML="Valores invalidos";
+}
+
+
+}
+function habilitarActualizacionPerfilAsistente(){
+   console.log("entro al habilitar");
+
+    var nombre=document.getElementById('editarNombre').style;
+    var pApellido=document.getElementById('editarPrimerA').style;
+    var sApellido=document.getElementById('editarSegundoA').style;
+
+
+    var correcto="rgb(129, 247, 159)";
+
+
+    if(nombre.borderColor==correcto&&pApellido.borderColor
+  ==correcto&&sApellido.borderColor==correcto){
+
+
+document.getElementById('actualiPerfilAsis').disabled=false;
+console.log(  document.getElementById('actualiPerfilAsis'));
+}else{
+  console.log(" no se habilita el boton");
+  document.getElementById('actualiPerfilAsis').disabled=true;
+  console.log(  document.getElementById('actualiPerfilAsis'));
+}
+
+
+}
+
+function habilitarActualizacionAdministrador(){
+   console.log("entro al habilitar");
+
+    var nombre=document.getElementById('editarNombre').style;
+    var pApellido=document.getElementById('editarPrimerA').style;
+    var sApellido=document.getElementById('editarSegundoA').style;
+
+
+    var correcto="rgb(129, 247, 159)";
+
+
+    if(nombre.borderColor==correcto&&pApellido.borderColor
+  ==correcto&&sApellido.borderColor==correcto){
+
+
+document.getElementById('actualizarAdministrador').disabled=false;
+console.log(  document.getElementById('actualizarAdministrador'));
+}else{
+  console.log(" no se habilita el boton");
+  document.getElementById('actualizarAdministrador').disabled=true;
+  console.log(  document.getElementById('actualizarAdministrador'));
+}
+
+
+}
+function habilitarActualizacionEstudiante(){
+   console.log("entro al habilitar");
+
+
+    var nombre=document.getElementById('editarNombre').style;
+    var pApellido=document.getElementById('editarPrimerA').style;
+    var sApellido=document.getElementById('editarSegundoA').style;
+    var fecha=document.getElementById('editarAno').style;
+    var cuarto=document.getElementById('editarCabina').style;
+
+
+    var correcto="rgb(129, 247, 159)";
+
+
+    if(nombre.borderColor==correcto&&pApellido.borderColor
+  ==correcto&&sApellido.borderColor==correcto&&cuarto.borderColor==correcto&&fecha.borderColor==correcto){
+
+
+document.getElementById('actualizarEstudiante').disabled=false;
+console.log(  document.getElementById('actualizarEstudiante'));
+}else{
+  console.log(" no se habilita el boton");
+  document.getElementById('actualizarEstudiante').disabled=true;
+  console.log(  document.getElementById('actualizarEstudiante'));
+}
+
+
+}
+
+function habilitarActualizacionEstudianteAdmi(){
+   console.log("entro al habilitar");
+
+
+    var nombre=document.getElementById('editarNombre').style;
+    var pApellido=document.getElementById('editarPrimerA').style;
+    var sApellido=document.getElementById('editarSegundoA').style;
+    var fecha=document.getElementById('editarAno').style;
+    var cuarto=document.getElementById('editarCabina').style;
+
+
+    var correcto="rgb(129, 247, 159)";
+
+
+    if(nombre.borderColor==correcto&&pApellido.borderColor
+  ==correcto&&sApellido.borderColor==correcto&&cuarto.borderColor==correcto&&fecha.borderColor==correcto){
+
+
+document.getElementById('actualizarEstudianteAdmi').disabled=false;
+console.log(  document.getElementById('actualizarEstudianteAdmi'));
+}else{
+  console.log(" no se habilita el boton");
+  document.getElementById('actualizarEstudianteAdmi').disabled=true;
+  console.log(  document.getElementById('actualizarEstudianteAdmi'));
+}
+
+
+}
+function validarNombrePerfil(input){
+  var contenido=input.value;
+  console.log(contenido);
+var  emailRegex =  /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+//Se muestra un texto a modo de ejemplo, luego va a ser un icono
+if(input.value.length > 0 &&emailRegex.test(contenido) ) {
+  with (input.style) {
+ borderColor="#81F79F";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+  document.getElementById('nombreokPerfil').innerHTML="";
+
+} else {
+
+  with (input.style) {
+ borderColor="#FA5858";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+document.getElementById('nombreokPerfil').innerHTML="Valores invalidos";
+}
+
+
+}
+
+function validarNombreActualizar(input){
+  var contenido=input.value;
+  console.log(contenido);
+var  emailRegex =  /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+//Se muestra un texto a modo de ejemplo, luego va a ser un icono
+if(input.value.length > 0 &&emailRegex.test(contenido) ) {
+  with (input.style) {
+ borderColor="#81F79F";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+  document.getElementById('nombreok').innerHTML="";
+
+} else {
+
+  with (input.style) {
+ borderColor="#FA5858";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+document.getElementById('nombreok').innerHTML="Valores invalidos";
+}
+
+
+}
+
+function validarPrimerActualizar(input){
+  var contenido=input.value;
+  console.log(contenido);
+var  emailRegex =  /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+//Se muestra un texto a modo de ejemplo, luego va a ser un icono
+if(input.value.length > 0 &&emailRegex.test(contenido) ) {
+  with (input.style) {
+ borderColor="#81F79F";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+  document.getElementById('primerAok').innerHTML="";
+
+} else {
+
+  with (input.style) {
+ borderColor="#FA5858";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+document.getElementById('primerAok').innerHTML="Valores invalidos";
+}
+
+
+}
+
+function validarSegundoActualizar(input){
+  var contenido=input.value;
+  console.log(contenido);
+var  emailRegex =  /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+//Se muestra un texto a modo de ejemplo, luego va a ser un icono
+if(input.value.length > 0 &&emailRegex.test(contenido) ) {
+  with (input.style) {
+ borderColor="#81F79F";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+  document.getElementById('segundoAok').innerHTML="";
+
+} else {
+
+  with (input.style) {
+ borderColor="#FA5858";
+ borderWidth = "3px";
+ borderStyle = "solid";
+}
+document.getElementById('segundoAok').innerHTML="Valores invalidos";
+}
+
+
+}
+
+
+function habilitarActualizacionAsistente(){
+   console.log("entro al habilitar");
+
+
+    var nombre=document.getElementById('editarNombre').style;
+    var pApellido=document.getElementById('editarPrimerA').style;
+    var sApellido=document.getElementById('editarSegundoA').style;
+
+
+
+
+    var correcto="rgb(129, 247, 159)";
+
+
+    if(nombre.borderColor==correcto&&pApellido.borderColor
+  ==correcto&&sApellido.borderColor==correcto){
+
+
+document.getElementById('registrarEstudiante2').disabled=false;
+console.log(  document.getElementById('registrarEstudiante2'));
+}else{
+  console.log(" no se habilita el boton");
+  document.getElementById('registrarEstudiante2').disabled=true;
+  console.log(  document.getElementById('registrarEstudiante2'));
+}
+
+
+}
+
+function permitirLogeo(){
+  var email=document.getElementById('user').style;
+  var pass=document.getElementById('pass').style;
+    var correcto="rgb(129, 247, 159)";
+
+
+    console.log(  document.getElementById('loGin').disabled);
+      if(email.borderColor==correcto&&pass.borderColor==correcto){
+        document.getElementById('loGin').disabled=false;
+      }else {
+            document.getElementById('loGin').disabled;
+      }
 
 }

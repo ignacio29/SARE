@@ -72,6 +72,9 @@ console.log(resultado);
                 $('#contenidoResidentes').html(responseText);
                 $('#contenidoResidentes2').html(responseText);
                    }
+                   $("#mytable").paginationTdA({
+                     elemPerPage: 8
+                   });
 
                          }
                                  );
@@ -96,7 +99,11 @@ console.log(resultado);
                     }else{
                   $('#contenidoAsistenetes').html(responseText);
                   $('#contenidoAsistentes2').html(responseText);
+
                     }
+                    $("#mytable").paginationTdA({
+                      elemPerPage: 8
+                    });
                           }
                                   );
                               });
@@ -122,7 +129,7 @@ function registarEstudiante(){
 
         },
                 function (responseText) {
-              
+
                     var url = "index.php";
                     var url2="index.php";
                     if(responseText!=null){
@@ -468,7 +475,7 @@ ced=document.getElementById("cedulaEliminacion").innerHTML;
 
 function eliminarAsistente(){
 
-ced=document.getElementById("cedulaEliminacion").innerHTML; 
+ced=document.getElementById("cedulaEliminacion").innerHTML;
      $(document).ready(function () {
 
         $.post('../Business/Estudiante/usuariosAction.php', {
@@ -477,7 +484,7 @@ ced=document.getElementById("cedulaEliminacion").innerHTML;
 
         },
                 function (responseText)
-                { 
+                {
                     document.getElementById("cerrarEliminar").click();
                       verAsistente();
                       if(responseText!=null){
@@ -504,12 +511,45 @@ var carrera=document.getElementById("carreraEstudiante"+input).innerHTML;
 var acceso=document.getElementById("estadoCuenta"+input).innerHTML;
 
 document.getElementById("editarCedula").value=cedula;
+with (document.getElementById("editarCedula").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
+
 document.getElementById("editarNombre").value=nombre;
+with (document.getElementById("editarNombre").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
+
 document.getElementById("editarPrimerA").value=primerA;
+with (document.getElementById("editarPrimerA").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 document.getElementById("editarSegundoA").value=segundoA;
+with (document.getElementById("editarSegundoA").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 //document.getElementById("editarSexo").value=sexo;
 document.getElementById("editarCabina").value=cabina;
+with (document.getElementById("editarCabina").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
+
 document.getElementById("editarAno").value=anoI;
+with (document.getElementById("editarAno").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 
 
 if(sexo=="M"){
@@ -556,22 +596,89 @@ document.getElementById("editarCarrera").selectedIndex=3;
 function editarEstudiantePerfil(input){
 console.log(input);
 var cedula=document.getElementById("cedulaEstudiante"+input).value;
+
 var nombre=document.getElementById("nombreEstudiante"+input).value;
+with (document.getElementById("nombreEstudiante"+input).style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 var primerA=document.getElementById("primerApellidoEstudiante"+input).value;
+with (document.getElementById("primerApellidoEstudiante"+input).style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 var segundoA=document.getElementById("segundoApellidoEstudiante"+input).value;
+with (document.getElementById("segundoApellidoEstudiante"+input).style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 var sexo=document.getElementById("sexoEstudiante"+input).value;
+with (document.getElementById("sexoEstudiante"+input).style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
+
+
 var cabina=document.getElementById("cabinaEstudiante"+input).value;
+with (document.getElementById("cabinaEstudiante"+input).style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 var anoI=document.getElementById("anoIngreso"+input).value;
+with (document.getElementById("anoIngreso"+input).style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 var carrera=document.getElementById("carreraEstudiante"+input).value;
 
 
 document.getElementById("editarCedula").value=cedula;
 document.getElementById("editarNombre").value=nombre;
+with (document.getElementById("editarNombre").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
+
 document.getElementById("editarPrimerA").value=primerA;
+
+with (document.getElementById("editarPrimerA").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
+
+
 document.getElementById("editarSegundoA").value=segundoA;
+with (document.getElementById("editarSegundoA").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
+
 //document.getElementById("editarSexo").value=sexo;
 document.getElementById("editarCabina").value=cabina;
+with (document.getElementById("editarCabina").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 document.getElementById("editarAno").value=anoI;
+
+with (document.getElementById("editarAno").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
+
+
+
 
 
 if(sexo=="M"){
@@ -623,9 +730,23 @@ var sexo=document.getElementById("sexoAsistente"+input).innerHTML;
 
 document.getElementById("editarCedula").value=cedula;
 document.getElementById("editarNombre").value=nombre;
+with (document.getElementById("editarNombre").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 document.getElementById("editarPrimerA").value=primerA;
+with (document.getElementById("editarPrimerA").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 document.getElementById("editarSegundoA").value=segundoA;
-
+with (document.getElementById("editarSegundoA").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 if(sexo=="M"){
 
 document.getElementsByName("gender")[0].checked=true;
@@ -650,10 +771,29 @@ var segundoA=document.getElementById("segundoAperfil").value;
 
 
 
+
 document.getElementById("editarCedula").value=cedula;
+
+
+
 document.getElementById("editarNombre").value=nombre;
+with (document.getElementById("editarNombre").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 document.getElementById("editarPrimerA").value=primerA;
+with (document.getElementById("editarPrimerA").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 document.getElementById("editarSegundoA").value=segundoA;
+with (document.getElementById("editarSegundoA").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 
 
 
@@ -669,8 +809,25 @@ var sexo=document.getElementById("sexoAsistente"+input).value;
 
 document.getElementById("editarCedula").value=cedula;
 document.getElementById("editarNombre").value=nombre;
+with (document.getElementById("editarNombre").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 document.getElementById("editarPrimerA").value=primerA;
+with (document.getElementById("editarPrimerA").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
+
+
 document.getElementById("editarSegundoA").value=segundoA;
+with (document.getElementById("editarSegundoA").style) {
+borderColor="#81F79F";
+borderWidth = "3px";
+borderStyle = "solid";
+}
 
 if(sexo=="M"){
 
@@ -744,7 +901,7 @@ console.log(valor);
                 $('#contenidoAsistenetes').html(responseText);
                 $('#contenidoAsistentes2').html(responseText);
 
-                
+
                   }
                         }
                                 );
@@ -1041,8 +1198,7 @@ console.log(responseText);
 
 function cargarPerfil(cedula,rol){
   $(document).ready(function () {
-console.log(cedula)
-console.log(rol)
+
 ;     $.post('../Business/Estudiante/usuariosAction.php', {
          accion: "cargarPerfil",
          valor:cedula,
@@ -1050,12 +1206,13 @@ console.log(rol)
      },
              function (responseText)
              {
- console.log(responseText);
+
                if(responseText==""){
  $('#contenidoPerfil').html("ERROR");
 
 
                }else{
+                 console.log(responseText);
 
              $('#contenidoPerfil').html(responseText);
                }

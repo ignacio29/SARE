@@ -177,6 +177,13 @@ session_start();
              </table>
           </div>
        </div>
+
+
+       <center>
+          <div class=" contenedor_paginacion">
+             <div class="clearfix paginacion"  id="paginacion"></div>
+          </div>
+       </center>
     </div>
 
 
@@ -321,7 +328,7 @@ session_start();
                <div class="modal-header">
                   <button id="cerrarActualizar" type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
                   <center>
-                     <h4 class="modal-title custom_align" id="Heading">REGISTRO DE RESIDENTES</h4>
+                     <h4 class="modal-title custom_align" id="Heading">Actualizacion REGISTRO DE RESIDENTES</h4>
                   </center>
                </div>
                <div class="modal-body">
@@ -331,7 +338,7 @@ session_start();
                            <label for="lname">C&EacuteDULA</label>
                         </div>
                         <div class="col-75">
-                            <input class="form-control" editable="false" type="text" id="editarCedula"
+                            <input class="form-control" disabled type="text" id="editarCedula"
                               onkeyup="caracteres()"><span id="cedulaok"></span>
                         </div>
                      </div>
@@ -340,7 +347,8 @@ session_start();
                            <label for="lname">NOMBRE</label>
                         </div>
                         <div class="col-75">
-                             <input type="text" class="form-control" id="editarNombre">
+                             <input type="text" class="form-control" id="editarNombre" onkeyup="validarNombreActualizar(this);habilitarActualizacionEstudianteAdmi()" onfocusout="validarNombreActualizar(this);habilitarActualizacionEstudianteAdmi()">
+                             <span id="nombreok"></span>
                         </div>
                      </div>
                      <div class="row">
@@ -348,7 +356,7 @@ session_start();
                            <label for="lname">APELLIDO 1</label>
                         </div>
                         <div class="col-75">
-                           <input type="text" class="form-control" id="editarPrimerA">
+                           <input type="text" class="form-control" onkeyup="validarPrimerActualizar(this); habilitarActualizacionEstudianteAdmi()" onfocusout="validarPrimerActualizar(this); habilitarActualizacionEstudianteAdmi()" id="editarPrimerA">
                         </div>
                      </div>
                      <div class="row">
@@ -356,7 +364,9 @@ session_start();
                            <label for="lname">APELLIDO 2</label>
                         </div>
                         <div class="col-75">
-                           <input type="text" class="form-control" id="editarSegundoA">
+
+                           <input type="text" class="form-control" onkeyup="validarSegundoActualizar(this); habilitarActualizacionEstudianteAdmi()" onfocusout="validarSegundoActualizar(this); habilitarActualizacionEstudianteAdmi()" id="editarSegundoA">
+                              <span id="primerAok"></span>
                         </div>
                      </div>
                      <div class="row">
@@ -364,7 +374,7 @@ session_start();
                            <label for="lname">SEXO</label>
                         </div>
                         <div class="col-75">
-                           <input type="radio"  name="gender" value="M" checked> MASCULINO <br>
+                           <input type="radio"  name="gender" value="M" checked> MASCULINO<br>
                            <input type="radio" name="gender" value="F"> FEMENINO<br>
                            <input type="radio"  name="gender" value="O"> OTRO
                         </div>
@@ -374,7 +384,8 @@ session_start();
                            <label for="lname">AÑO INGRESO</label>
                         </div>
                         <div class="col-75">
-                          <input type="number" class="form-control" id="editarAno">
+                          <input type="number" class="form-control" onkeyup="validarFecha(this);habilitarActualizacionEstudianteAdmi()" onfocusout="validarFecha(this);habilitarActualizacionEstudianteAdmi()" onchange="validarFecha(this)" id="editarAno">
+                          <span id="estadoFecha"></span>
                         </div>
                      </div>
                      <div class="row">
@@ -382,7 +393,7 @@ session_start();
                            <label for="lname">NUMERO  DE CUARTO</label>
                         </div>
                         <div class="col-75">
-                            <input type="number" class="form-control" id="editarCabina">
+                            <input type="number" onkeyup="validarCuarto(this);habilitarActualizacionEstudianteAdmi()" onfocusout="validarCuarto(this);habilitarActualizacionEstudianteAdmi()" class="form-control" id="editarCabina"><span id="estadoCuarto"></span>
                         </div>
                      </div>
                      <div class="row">
@@ -412,7 +423,7 @@ session_start();
                   </form>
                </div>
                <div class="modal-footer ">
-                   <button type="button" id="registrarEstudiante2" onclick="actualizarEstudianteAdmin();" >GUARDAR</button>
+                   <button type="button" id="actualizarEstudianteAdmi" onclick="actualizarEstudianteAdmin();" >GUARDAR</button>
                </div>
                <!-- /.modal-content -->
             </div>

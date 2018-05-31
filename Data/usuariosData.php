@@ -210,7 +210,7 @@ class UsuariosData {
       if (!$conn) {
           die("Connection failed: " . mysqli_connect_error());
       }
-      $statement = $conn->prepare("CALL elimarAsistente(?)");
+      $statement = $conn->query("CALL elimarAsistente('$cedula')");
       $statement->bind_param("s", $cedula);
       $statement->execute();
       if ($statement == TRUE) {
@@ -1116,7 +1116,7 @@ echo $cedul;
                    $Estudiantes=$Estudiantes.'<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#actualizarEstudiante" onclick="editarEstudiante('.$cont.')" ><span class="glyphicon glyphicon-pencil"></span></button></p>';
 
                    $Estudiantes=$Estudiantes.'<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" onclick="cargarEliminarResidente('.$cont.')"><span class="glyphicon glyphicon-trash"></span></button></p> </td>
-                       <td style="display:none;"><input type="hidden" id="idEstudiante"></td>
+                       <td><input type="hidden" id="idEstudiante"></td>
 
                    ';
                  }
@@ -1152,7 +1152,7 @@ if ($result) {
 
   while ($row = $result->fetch_assoc()) {
        $Estudiantes='<div class="col-md-4"></div>
-                      <div class="col-md-5">  <img src="../imagenes/chico.png" class="imgRedonda" alt="30" heigth="30"  ></div>
+                      <div class="col-md-5">  <img src="../images/chico.png" class="imgRedonda" alt="30" heigth="30"  ></div>
                       <div class="col-md-12"></div>
                       <div class="col-md-12"></div>
                       <div class="col-md-12"></div>
@@ -1243,10 +1243,10 @@ if ($result) {
        $Estudiantes='<div class="col-md-4"></div>
                       <div class="col-md-5">';
                       if($row['sexo']=="F"){
- $Estudiantes= $Estudiantes.'<img src="../imagenes/chica.png" class="imgRedonda" alt="30" heigth="30"  ></div>';
+ $Estudiantes= $Estudiantes.'<img src="../images/chica.png" class="imgRedonda" alt="30" heigth="30"  ></div>';
 
                   }else{
-                    $Estudiantes= $Estudiantes.'<img src="../imagenes/chico.png" class="imgRedonda" alt="30"  heigth="30"  ></div>';
+                    $Estudiantes= $Estudiantes.'<img src="../images/chico.png" class="imgRedonda" alt="30"  heigth="30"  ></div>';
                   }
 
                   $Estudiantes= $Estudiantes.'<div class="col-md-12"></div>
@@ -1353,10 +1353,10 @@ if ($result) {
          $Estudiantes='<div class="col-md-4"></div>
                         <div class="col-md-5">';
                         if($row['sexo']=="F"){
-   $Estudiantes= $Estudiantes.'<img src="../imagenes/chica.png" class="imgRedonda" alt="30" heigth="30"  ></div>';
+   $Estudiantes= $Estudiantes.'<img src="../images/chica.png" class="imgRedonda" alt="30" heigth="30"  ></div>';
 
                     }else{
-                      $Estudiantes= $Estudiantes.'<img src="../imagenes/chico.png" class="imgRedonda" alt="30"  heigth="30"  ></div>';
+                      $Estudiantes= $Estudiantes.'<img src="../images/chico.png" class="imgRedonda" alt="30"  heigth="30"  ></div>';
                     }
 
                     $Estudiantes= $Estudiantes.'<div class="col-md-12"></div>
