@@ -3,7 +3,7 @@ session_start();
 ?>
 <div class="container"> 
     <header>
-        <h2>REPORTAR contenidoArticulos DEFICIENTES</h2>
+        <h2>REPORTAR ARTICULOS DEFICIENTES</h2>
     </header>
     <br> 
       <table class="default table table-bordered table-striped"  content="width=device-width" >

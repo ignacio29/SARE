@@ -872,7 +872,7 @@ function consultarPorEstadoArticuloInstitucional($estadoArticulo) {
                     $Articulos=$Articulos.'<td>'.$row['tipo']."</td>";
                     $Articulos=$Articulos.'<td>'.$row['clase']."</td>";
                     $id = $row['idarticulo'];
-                  $Articulos=$Articulos.'<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#actualizarArticulo"  id="idModificar" onclick="insertarArticulo('.$id.')"><span class="glyphicon glyphicon-warning-sign"></span></button></p></td>';
+                  $Articulos=$Articulos.'<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#actualizarArticulo"  id="idModificar" onclick="insertarArticulo('.$id.')"><span class="glyphicon glyphicon-warning-sign"></span></button></p></td>';
                     $Articulos=$Articulos."</tr>";
 
 
@@ -903,7 +903,7 @@ function consultarPorEstadoArticuloInstitucional($estadoArticulo) {
                     $Articulos=$Articulos.'<td>'.$row['tipo']."</td>";
                     $Articulos=$Articulos.'<td>'.$row['clase']."</td>";
                     $id = $row['idarticulo'];
-                  $Articulos=$Articulos.'<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#actualizarArticulo"  id="idModificar" onclick="insertarArticulo('.$id.')"><span class="glyphicon glyphicon-warning-sign"></span></button></p></td>';
+                  $Articulos=$Articulos.'<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#actualizarArticulo"  id="idModificar" onclick="insertarArticulo('.$id.')"><span class="glyphicon glyphicon-warning-sign"></span></button></p></td>';
                     $Articulos=$Articulos."</tr>";
 
 
@@ -934,7 +934,7 @@ function consultarPorEstadoArticuloInstitucional($estadoArticulo) {
                     $Articulos=$Articulos.'<td>'.$row['tipo']."</td>";
                     $Articulos=$Articulos.'<td>'.$row['clase']."</td>";
                     $id = $row['idarticulo'];
-                  $Articulos=$Articulos.'<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#actualizarArticulo"  id="idModificar" onclick="insertarArticulo('.$id.')"><span class="glyphicon glyphicon-warning-sign"></span></button></p></td>';
+                  $Articulos=$Articulos.'<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#actualizarArticulo"  id="idModificar" onclick="insertarArticulo('.$id.')"><span class="glyphicon glyphicon-warning-sign"></span></button></p></td>';
                     $Articulos=$Articulos."</tr>";
 
 
